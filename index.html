@@ -24,23 +24,38 @@
       </header>
 
       <main class="pricing-comp-container">
-        <span class="pageviews-text">Pageviews</span>
-        <div class="price-slider-container">
-          <input
-            type="range"
-            min="100000"
-            max="1000000"
-            name="price"
-            id="price"
-          />
+        <div class="pricing-info-controls">
+          <div class="pageviews-container">
+            <span class="pageview-count-text">100</span>
+            <span class="pageviews-text">Pageviews</span>
+          </div>
+
+          <div class="price-slider-container">
+            <input
+              type="range"
+              min="100000"
+              max="1000000"
+              name="price"
+              id="price"
+            />
+          </div>
+          <div class="price-container">
+            <span class="price-text">$16.00</span>
+            <span class="month-text">/ month</span>
+          </div>
+          <!-- input: $ /month Monthly Billing Yearly Billing 25% discount -->
         </div>
-        <div class="price-container">
-          <span class="price-text"> $16.00 </span>
-          <span class="month-text"> /month </span>
-        </div>
-        input: $ /month Monthly Billing Yearly Billing 25% discount Unlimited
-        websites 100% data ownership Email reports Start my trial
+        <hr class="separator-line" />
+        <section>
+          <p>Unlimited websites</p>
+          <p>100% data ownership</p>
+          <p>Email reports</p>
+          <div class="button-container">
+            <button class="btn btn-trial">Start my trial</button>
+          </div>
+        </section>
       </main>
     </div>
+    <script src="./js/app.js"></script>
   </body>
 </html>
