@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap');
+
+:root {
+  /** COLORS **/
+  --full-slider-bar: hsl(174, 77%, 80%);
+  --slider-bg: hsl(174, 86%, 45%);
+  --discount-bg: hsl(14, 92%, 95%);
+  --discount-text: hsl(15, 100%, 70%);
+  --cta-text: hsl(226, 100%, 87%);
+
+  --pricing-comp-bg: hsl(230, 100%, 99%);
+  --main-bg: hsl(224, 65%, 95%);
+  --toggle-bg: hsl(223, 50%, 87%);
+  --empty-slider-bar: hsl(224, 65%, 95%);
+  --neutral-text: hsl(225, 20%, 60%);
+  --text-cta-bg: hsl(227, 35%, 25%);
+
+  /** TYPOGRAPHY **/
+  --primary-font: 'Manrope', sans-serif;
+  --semi-bold: 600;
+  --bold: 800;
+
+  /** DESIGN WIDTHS **/
+  --mobile: 375px;
+  --tablet: 768px;
+  --desktop: 1440px;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  /* font-family: var(--primary-font); */
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--main-bg);
+  font-family: var(--primary-font);
+}
+
+.page-container {
+  width: 100%;
+  padding: 3rem;
+  border: 1px solid black;
+}
+
+.header-container {
+  width: 100%;
+  background-image: url('../images/pattern-circles.svg');
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  background-position: center center;
+  padding: 2rem 0;
+  text-align: center;
+  min-height: 15rem;
+}
+
+.header-title {
+  color: var(--text-cta-bg);
+  font-size: 2rem;
+  font-weight: var(--bold);
+  padding: 2.5rem 0;
+}
+
+.header-subhead {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: var(--semi-bold);
+  margin-bottom: 1.5rem;
+  color: var(--neutral-text);
+}
+
+.pricing-comp-container {
+  background-color: var(--pricing-comp-bg);
+  /* padding: 2rem; */
+  height: 25rem;
+  border-radius: 12px;
+}
+
+/** SLIDER STYLES **/
+
+.price-slider-container {
+  width: 90%;
+  margin: 0 auto;
+  display: block;
+  padding: 2rem 0;
+}
+
+input[type='range'] {
+  -webkit-appearance: none;
+  /* overflow: hidden; */
+  background-color: var(--empty-slider-bar);
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 1rem;
+  background: var(--full-slider-bar);
+  border: none;
+  border-radius: 15px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: var(--slider-bg);
+  background-image: url('../images/icon-slider.svg');
+  background-position: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-top: -2rem;
+}
+
+input[type='range']:focus {
+  outline: none;
+}
+
+input[type='range']:focus::-webkit-slider-runnable-track {
+  background: var(--full-slider-bar);
+}
+
+input[type='range'] {
+  /* fix for FF unable to apply focus style bug  */
+  border: 1px solid white;
+
+  /*required for proper track sizing in FF*/
+  width: 100%;
+  /* max-width: 700px; */
+}
+
+input[type='range']::-moz-range-track {
+  width: 100%;
+  height: 1rem;
+  background: var(--empty-slider-bar);
+  border: none;
+  border-radius: 5px;
+}
+
+input[type='range']::-moz-range-thumb {
+  border: none;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 50%;
+  background: var(--slider-bg);
+  background-image: url('../images/icon-slider.svg');
+  background-position: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+input[type='range']::-moz-range-progress {
+  background-color: var(--full-slider-bar);
+  height: 1em;
+}
+
+/*hide the outline behind the border*/
+input[type='range']:-moz-focusring {
+  outline: 1px solid white;
+  outline-offset: -1px;
+}
+
+input[type='range']:focus::-moz-range-track {
+  background: var(--empty-slider-bar);
+}
