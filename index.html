@@ -12,11 +12,35 @@
       href="./images/favicon-32x32.png"
     />
 
+    <link rel="stylesheet" href="./css/styles.css" />
     <title>Interactive pricing component</title>
   </head>
   <body>
-    Simple, traffic-based pricing Sign-up for our 30-day trial. No credit card
-    required. Pageviews $ /month Monthly Billing Yearly Billing 25% discount
-    Unlimited websites 100% data ownership Email reports Start my trial
+    <div class="page-container">
+      <header class="header-container">
+        <h3 class="header-title">Simple, traffic-based pricing</h3>
+        <span class="header-subhead">Sign-up for our 30-day trial.</span>
+        <span class="header-subhead">No credit card required.</span>
+      </header>
+
+      <main class="pricing-comp-container">
+        <span class="pageviews-text">Pageviews</span>
+        <div class="price-slider-container">
+          <input
+            type="range"
+            min="100000"
+            max="1000000"
+            name="price"
+            id="price"
+          />
+        </div>
+        <div class="price-container">
+          <span class="price-text"> $16.00 </span>
+          <span class="month-text"> /month </span>
+        </div>
+        input: $ /month Monthly Billing Yearly Billing 25% discount Unlimited
+        websites 100% data ownership Email reports Start my trial
+      </main>
+    </div>
   </body>
 </html>
