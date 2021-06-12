@@ -271,6 +271,20 @@ body {
   color: var(--neutral-text);
 }
 
+.discount-badge {
+  margin-left: 0.5rem;
+  padding: 0.5rem 0.7rem;
+  background-color: var(--discount-bg);
+  color: var(--discount-text);
+  border-radius: 3rem;
+  font-size: 1.2rem;
+  font-weight: var(--bold);
+}
+
+.discount-badge::after {
+  content: '-25%';
+}
+
 .discount-badge-mobile,
 .discount-badge-desktop {
   margin-left: 0.5rem;
@@ -402,7 +416,6 @@ input:checked + .slider:before {
 
 input[type='range'] {
   -webkit-appearance: none;
-  /* overflow: hidden; */
   background-color: var(--empty-slider-bar);
 }
 
@@ -536,12 +549,8 @@ input[type='range']:focus::-moz-range-track {
     margin-top: 0;
   }
 
-  .discount-badge-desktop {
-    display: block;
-  }
-
-  .discount-badge-mobile {
-    display: none;
+  .discount-badge::after {
+    content: '-25% discount';
   }
 
   .separator-line {
