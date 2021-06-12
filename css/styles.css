@@ -165,17 +165,19 @@ html {
 
 body {
   font-family: var(--primary-font);
+  background-color: var(--main-bg);
 }
 
 .page-container {
   width: 100%;
+  padding-bottom: 2rem;
 }
 
 .header-container {
-  padding-top: 5rem;
   background-image: url('../images/bg-pattern.svg');
   background-repeat: no-repeat;
   background-size: cover;
+  padding-top: 5rem;
   min-height: 45rem;
 }
 
@@ -209,6 +211,7 @@ body {
   width: 85%;
   margin: 0 auto;
   margin-top: -13rem;
+  margin-bottom: 2rem;
   background-color: var(--white);
   border-radius: 12px;
   box-shadow: 1px 10px 25px rgba(0, 0, 0, 0.1);
@@ -268,7 +271,8 @@ body {
   color: var(--neutral-text);
 }
 
-.discount-badge {
+.discount-badge-mobile,
+.discount-badge-desktop {
   margin-left: 0.5rem;
   padding: 0.5rem 0.7rem;
   background-color: var(--discount-bg);
@@ -276,6 +280,10 @@ body {
   border-radius: 3rem;
   font-size: 1.2rem;
   font-weight: var(--bold);
+}
+
+.discount-badge-desktop {
+  display: none;
 }
 
 .separator-line {
@@ -478,7 +486,7 @@ input[type='range']:focus::-moz-range-track {
     background-image: url('../images/bg-pattern.svg');
     background-repeat: no-repeat;
     background-size: cover;
-    min-height: 40vh;
+    min-height: 52rem;
   }
 
   .header-title {
@@ -509,11 +517,6 @@ input[type='range']:focus::-moz-range-track {
     margin: 0;
   }
 
-  .pageview-count-text,
-  .pageviews-text {
-    vertical-align: middle;
-  }
-
   .price-text {
     font-size: 4.5rem;
   }
@@ -524,13 +527,21 @@ input[type='range']:focus::-moz-range-track {
 
   .price-slider-container {
     flex-basis: 100%;
-    /* order: 3; */
     margin: 0;
+    margin-top: 4rem;
     order: 3;
   }
 
   .billing-type-controls {
-    margin-top: 1rem;
+    margin-top: 0;
+  }
+
+  .discount-badge-desktop {
+    display: block;
+  }
+
+  .discount-badge-mobile {
+    display: none;
   }
 
   .separator-line {
