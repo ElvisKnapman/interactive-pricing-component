@@ -8,7 +8,8 @@
   --discount-text: hsl(15, 100%, 70%);
   --cta-text: hsl(226, 100%, 87%);
 
-  --pricing-comp-bg: hsl(230, 100%, 99%);
+  --white: hsl(0, 0%, 100%);
+  --pricing-comp-bg: hsl(228, 16%, 47%);
   --main-bg: hsl(224, 65%, 95%);
   --toggle-bg: hsl(223, 50%, 87%);
   --empty-slider-bar: hsl(224, 65%, 95%);
@@ -155,7 +156,7 @@ table {
 *::before,
 *::after {
   box-sizing: border-box;
-  /* font-family: var(--primary-font); */
+  font-family: var(--primary-font);
 }
 
 html {
@@ -163,24 +164,30 @@ html {
 }
 
 body {
-  background-color: var(--main-bg);
   font-family: var(--primary-font);
 }
 
 .page-container {
   width: 100%;
-  padding: 2rem;
 }
 
 .header-container {
+  padding-top: 5rem;
+  background-image: url('../images/bg-pattern.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 45rem;
+}
+
+.header-titles {
   width: 100%;
   background-image: url('../images/pattern-circles.svg');
   background-repeat: no-repeat;
+
   /* background-size: cover; */
   background-position: center center;
   padding: 2rem 0;
   text-align: center;
-  min-height: 15rem;
 }
 
 .header-title {
@@ -199,8 +206,12 @@ body {
 }
 
 .pricing-comp-container {
-  background-color: var(--pricing-comp-bg);
+  width: 85%;
+  margin: 0 auto;
+  margin-top: -13rem;
+  background-color: var(--white);
   border-radius: 12px;
+  box-shadow: 1px 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .pricing-info-controls {
@@ -247,9 +258,9 @@ body {
 
 .billing-type-controls {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
-  margin-top: 4rem;
+  margin: 2rem 0 5rem 0;
 }
 
 .billing-type-text {
@@ -275,7 +286,7 @@ body {
 }
 
 .feature-container {
-  margin: 1.5rem 0;
+  margin: 1rem 0;
   text-align: center;
 }
 
@@ -316,7 +327,7 @@ body {
   display: inline-block;
   width: 5.5rem;
   height: 3rem;
-  margin: 0 1rem;
+  margin: 0 1.2rem;
 }
 
 /* Hide default HTML checkbox */
@@ -336,7 +347,7 @@ body {
   bottom: 0;
   background-color: var(--toggle-bg);
   -webkit-transition: 0.4s;
-  transition: 0.4s;
+  transition: all 0.4s;
 }
 
 .slider:before {
@@ -348,7 +359,7 @@ body {
   bottom: 5px;
   background-color: white;
   -webkit-transition: 0.4s;
-  transition: 0.4s;
+  transition: all 0.4s;
 }
 
 input:checked + .slider {
@@ -360,11 +371,6 @@ input:checked + .slider:before {
   -ms-transform: translateX(2.5rem);
   transform: translateX(2.5rem);
 }
-
-/* input[type='checkbox']:focus,
-input[type='checkbox']:active {
-  outline: none;
-} */
 
 /* Rounded sliders */
 .slider.round {
@@ -411,7 +417,7 @@ input[type='range']::-webkit-slider-thumb {
   background-position: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  box-shadow: 0 8px 40px var(--slider-bg);
+  box-shadow: 0 7px 50px var(--slider-bg);
   margin-top: -2rem;
 }
 
@@ -465,4 +471,86 @@ input[type='range']:-moz-focusring {
 
 input[type='range']:focus::-moz-range-track {
   background: var(--empty-slider-bar);
+}
+
+@media (min-width: 1440px) {
+  .header-container {
+    background-image: url('../images/bg-pattern.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 40vh;
+  }
+
+  .header-title {
+    font-size: 4rem;
+  }
+
+  .header-subhead {
+    display: inline-block;
+    font-size: 2rem;
+  }
+
+  .pricing-comp-container {
+    width: 50%;
+    max-width: 75rem;
+    margin-top: -24rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .pricing-info-controls {
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6rem;
+  }
+
+  .pageviews-container {
+    margin: 0;
+  }
+
+  .pageview-count-text,
+  .pageviews-text {
+    vertical-align: middle;
+  }
+
+  .price-text {
+    font-size: 4.5rem;
+  }
+
+  .month-text {
+    font-size: 2rem;
+  }
+
+  .price-slider-container {
+    flex-basis: 100%;
+    /* order: 3; */
+    margin: 0;
+    order: 3;
+  }
+
+  .billing-type-controls {
+    margin-top: 1rem;
+  }
+
+  .separator-line {
+    margin-bottom: 1rem;
+  }
+
+  .features-button-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4rem;
+  }
+
+  .features-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .feature-container {
+    text-align: left;
+  }
 }
