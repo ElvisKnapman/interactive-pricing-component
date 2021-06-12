@@ -27,7 +27,6 @@ selectors.rangeSlider.addEventListener('input', (e) => {
   data.currentSliderPosition = rangeValue;
 
   const selectedPageViews = data.pageviewOptions[rangeValue].pageviews;
-  // const selectedPrice = data.pageviewOptions[rangeValue].price;
 
   // update the data object with currently selected pageviews
   data.pageviewText = selectedPageViews;
